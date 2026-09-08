@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFDF7"
+    tools:context=".lista_sobremesa">
+
+    <!-- ============================= -->
+    <!-- TOPO -->
+    <!-- ============================= -->
+
+    <View
+        android:id="@+id/barraTopo"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#DA291C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- VOLTAR -->
+
+    <!-- LOGO -->
+
+    <TextView
+        android:id="@+id/btnVoltar1"
+        android:layout_width="62dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="4dp"
+        android:gravity="center"
+        android:text="‹"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@id/barraTopo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/barraTopo"
+        app:layout_constraintVertical_bias="0.611" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:contentDescription="Logo McDonald's"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="@id/barraTopo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/barraTopo" />
+
+    <!-- SACOLA -->
+
+    <ImageView
+        android:id="@+id/imgSacola"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="14dp"
+        android:contentDescription="Sacola"
+        android:scaleType="centerInside"
+        android:src="@drawable/sacola"
+        app:layout_constraintBottom_toBottomOf="@id/barraTopo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/barraTopo" />
+
+    <!-- ============================= -->
+    <!-- TÍTULO -->
+    <!-- ============================= -->
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        android:text="Sobremesas"
+        android:textColor="#222222"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barraTopo" />
+
+    <!-- ============================= -->
+    <!-- PESQUISA -->
+    <!-- ============================= -->
+
+    <TextView
+        android:id="@+id/txtSubtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="Escolha a sua favorita!"
+        android:textColor="#777777"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTitulo" />
+
+    <EditText
+        android:id="@+id/edtPesquisa"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="#FFFFFF"
+        android:hint="🔍  Pesquisar hambúrguer..."
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:singleLine="true"
+        android:textColor="#222222"
+        android:textColorHint="#999999"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtSubtitulo" />
+
+    <!-- ============================= -->
+    <!-- CARD 1 - BIG MAC -->
+    <!-- ============================= -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardBigMac"
+        android:layout_width="175dp"
+        android:layout_height="165dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="12dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtPesquisa">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgBigMac"
+                android:layout_width="130dp"
+                android:layout_height="82dp"
+                android:layout_marginTop="3dp"
+                android:contentDescription="Big Mac"
+                android:scaleType="fitCenter"
+                android:src="@drawable/mcflurry_ovomaltine"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtBigMac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="1dp"
+                    android:text="Mc Flurry Ovomaltine"
+                android:textColor="#222222"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgBigMac" />
+
+            <TextView
+                android:id="@+id/precoBigMac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="1dp"
+                android:text="R$ 14,90"
+                android:textColor="#DA291C"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtBigMac" />
+
+            <TextView
+                android:id="@+id/btnBigMac"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginBottom="8dp"
+                android:background="#FFC72C"
+                android:gravity="center"
+                android:text="›"
+                android:textColor="#222222"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- ============================= -->
+    <!-- CARD 2 - QUARTERÃO -->
+    <!-- ============================= -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardQuarteirao"
+        android:layout_width="175dp"
+        android:layout_height="165dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="15dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtPesquisa">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgQuarteirao"
+                android:layout_width="130dp"
+                android:layout_height="82dp"
+                android:layout_marginTop="3dp"
+                android:contentDescription="Brabo Brabissimo Carne"
+                android:scaleType="fitCenter"
+                android:src="@drawable/mcflurry_mm"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtQuarteirao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="1dp"
+                android:text="Mc Flurry MM"
+                android:textColor="#222222"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgQuarteirao" />
+
+            <TextView
+                android:id="@+id/precoQuarteirao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="1dp"
+                android:text="R$ 16,90"
+                android:textColor="#DA291C"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtQuarteirao" />
+
+            <TextView
+                android:id="@+id/btnQuarteirao"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginBottom="8dp"
+                android:background="#FFC72C"
+                android:gravity="center"
+                android:text="›"
+                android:textColor="#222222"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- ============================= -->
+    <!-- CARD 3 - CHEDDAR -->
+    <!-- ============================= -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardCheddar"
+        android:layout_width="175dp"
+        android:layout_height="165dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardBigMac">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgCheddar"
+                android:layout_width="130dp"
+                android:layout_height="82dp"
+                android:layout_marginTop="4dp"
+                android:contentDescription="Cheddar McMelt"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sundaychocolate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.488"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtCheddar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="1dp"
+                android:text="Sunday de chocolate"
+                android:textColor="#222222"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgCheddar" />
+
+            <TextView
+                android:id="@+id/precoCheddar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="1dp"
+                android:text="R$ 8,90"
+                android:textColor="#DA291C"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtCheddar" />
+
+            <TextView
+                android:id="@+id/btnCheddar"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginBottom="8dp"
+                android:background="#FFC72C"
+                android:gravity="center"
+                android:text="›"
+                android:textColor="#222222"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- ============================= -->
+    <!-- CARD 4 - DUPLO -->
+    <!-- ============================= -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardDuplo"
+        android:layout_width="175dp"
+        android:layout_height="165dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardQuarteirao">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgDuplo"
+                android:layout_width="130dp"
+                android:layout_height="82dp"
+                android:layout_marginTop="3dp"
+                android:contentDescription="Brabo SmokeHouse "
+                android:scaleType="fitCenter"
+                android:src="@drawable/milkshake_morango"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtDuplo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="1dp"
+                android:text="Milkshake Morango 400ml"
+                android:textColor="#222222"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgDuplo" />
+
+            <TextView
+                android:id="@+id/precoDuplo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="1dp"
+                android:text="R$ 17,90"
+                android:textColor="#DA291C"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtDuplo" />
+
+            <TextView
+                android:id="@+id/btnDuplo"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginBottom="8dp"
+                android:background="#FFC72C"
+                android:gravity="center"
+                android:text="›"
+                android:textColor="#222222"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- ============================= -->
+    <!-- CARD 5 - MCCHICKEN -->
+    <!-- ============================= -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMcChicken"
+        android:layout_width="175dp"
+        android:layout_height="165dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardCheddar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgMcChicken"
+                android:layout_width="130dp"
+                android:layout_height="82dp"
+                android:layout_marginTop="3dp"
+                android:contentDescription="McChicken"
+                android:scaleType="fitCenter"
+                android:src="@drawable/casquinha_chocolate_recheada"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtMcChicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="1dp"
+                android:text="Casquinha chocolate recheada"
+                android:textColor="#222222"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgMcChicken" />
+
+            <TextView
+                android:id="@+id/precoMcChicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="1dp"
+                android:text="R$ 5,00"
+                android:textColor="#DA291C"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtMcChicken" />
+
+            <TextView
+                android:id="@+id/btnMcChicken"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginBottom="8dp"
+                android:background="#FFC72C"
+                android:gravity="center"
+                android:text="›"
+                android:textColor="#222222"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- ============================= -->
+    <!-- CARD 6 - MÉQUI BACON -->
+    <!-- ============================= -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardMequi"
+        android:layout_width="175dp"
+        android:layout_height="165dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardDuplo">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgMequi"
+                android:layout_width="130dp"
+                android:layout_height="82dp"
+                android:layout_marginTop="3dp"
+                android:contentDescription="McCrispy Legend"
+                android:scaleType="fitCenter"
+                android:src="@drawable/casquinhamista"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtMequi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="1dp"
+                android:text="Casquinha mista"
+                android:textColor="#222222"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgMequi" />
+
+            <TextView
+                android:id="@+id/precoMequi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="1dp"
+                android:text="R$ 3,00
+"
+                android:textColor="#DA291C"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtMequi" />
+
+            <TextView
+                android:id="@+id/btnMequi"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="9dp"
+                android:layout_marginBottom="8dp"
+                android:background="#FFC72C"
+                android:gravity="center"
+                android:text="›"
+                android:textColor="#222222"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- ============================= -->
+    <!-- MENU INFERIOR -->
+    <!-- ============================= -->
+
+    <TextView
+        android:id="@+id/menuHome"
+        android:layout_width="84dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:text="🏠&#10;Início"
+        android:textColor="#DA291C"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/menuCardapio"
+        android:layout_width="88dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:text="☰&#10;Menu"
+        android:textColor="#777777"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/menuHome" />
+
+    <TextView
+        android:id="@+id/menuPedidos"
+        android:layout_width="85dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:text="🛍&#10;Pedidos"
+        android:textColor="#777777"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/menuCardapio" />
+
+    <TextView
+        android:id="@+id/menuPerfil"
+        android:layout_width="82dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center"
+        android:text="👤&#10;Perfil"
+        android:textColor="#777777"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/menuPedidos" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,425 +4,672 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFDF7"
     tools:context=".home_mc">
 
-    <!-- ================================================= -->
-    <!-- MENU HAMBURGUER -->
-    <!-- ================================================= -->
 
-    <ImageView
+    <!-- ===================================================== -->
+    <!-- TOPO VERMELHO -->
+    <!-- ===================================================== -->
+
+    <View
         android:id="@+id/imgCategoriaBatata7"
-        android:layout_width="418dp"
-        android:layout_height="49dp"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
         android:background="#CA2B2B"
-        android:contentDescription="Batatas"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <!-- ================================================= -->
-    <!-- TÍTULO -->
-    <!-- ================================================= -->
-
-    <!-- ================================================= -->
-    <!-- CARRINHO / SACOLA -->
-    <!-- ================================================= -->
-
-    <ImageView
-        android:id="@+id/imgMenu"
-        android:layout_width="43dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:background="#FFFFFF"
-        android:contentDescription="Menu"
-        android:scaleType="centerInside"
-        android:src="@drawable/menuicone"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- ================================================= -->
-    <!-- PESQUISA -->
-    <!-- ================================================= -->
+
+    <!-- ===================================================== -->
+    <!-- LOGO -->
+    <!-- ===================================================== -->
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription="Logo"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+
+    <!-- ===================================================== -->
+    <!-- TÍTULO -->
+    <!-- ===================================================== -->
 
     <TextView
         android:id="@+id/txtTitulo"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="112dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="72dp"
         android:text="Com vontade de McDonald's?"
         android:textColor="#222222"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/imgSacola"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.068" />
-
-    <ImageView
-        android:id="@+id/imgSacola"
-        android:layout_width="32dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="16dp"
-        android:background="#FFFFFF"
-        android:contentDescription="Sacola"
-        android:scaleType="centerInside"
-        android:src="@drawable/sacolaicone"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/edtPesquisa"
-        android:layout_width="280dp"
-        android:layout_height="50dp"
-        android:background="#FFFFFF"
-        android:hint="🔍  Pesquisar seu lanche..."
-        android:paddingStart="15dp"
-        android:paddingEnd="15dp"
-        android:singleLine="true"
-        android:textColor="#222222"
-        android:textColorHint="#999999"
-        android:textSize="12sp"
-        app:layout_constraintTop_toBottomOf="@id/imgMenu"
-        app:layout_constraintStart_toStartOf="parent"
+
+    <!-- ===================================================== -->
+    <!-- SUBTÍTULO -->
+    <!-- ===================================================== -->
+
+    <TextView
+        android:id="@+id/txtSubtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="25dp" />
+        android:layout_marginTop="3dp"
+        android:text="Deliciosos favoritos, entregues rapidinho."
+        android:textColor="#777777"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTitulo" />
 
-    <!-- ================================================= -->
-    <!-- BANNER -->
-    <!-- ================================================= -->
 
-    <!-- ================================================= -->
-    <!-- TÍTULO CATEGORIAS -->
-    <!-- ================================================= -->
+    <!-- ===================================================== -->
+    <!-- ÁREA DE CONTEÚDO COM ROLAGEM -->
+    <!-- ===================================================== -->
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollHome"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:paddingBottom="85dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtSubtitulo"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="12dp"
+            android:paddingBottom="20dp">
+
+
+            <!-- ================================================= -->
+            <!-- RETIRAR EM -->
+            <!-- ================================================= -->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnRetirar"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="3dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/txtIconeRetirar"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="10dp"
+                        android:gravity="center"
+                        android:text="📍"
+                        android:textSize="25sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtRetirar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Retirar em"
+                        android:textColor="#222222"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/txtIconeRetirar"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtSetaRetirar"
+                        android:layout_width="35dp"
+                        android:layout_height="45dp"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="center"
+                        android:text="›"
+                        android:textColor="#222222"
+                        android:textSize="30sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- ================================================= -->
+            <!-- BANNER -->
+            <!-- ================================================= -->
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="Banner"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnRetirar"
+                app:srcCompat="@drawable/banner_sorvete" />
+
+
+            <!-- ================================================= -->
+            <!-- CATEGORIAS -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:id="@+id/txtCategorias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="17dp"
+                android:text="Categorias"
+                android:textColor="#222222"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageView5" />
+
+
+            <!-- ================================================= -->
+            <!-- BURGER -->
+            <!-- ================================================= -->
+
+            <ImageView
+                android:id="@+id/imgCategoriaBatata2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:background="#CA2B2B"
+                android:contentDescription="Burgers"
+                android:scaleType="centerInside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtCategorias" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="72dp"
+                android:layout_height="55dp"
+                android:contentDescription="Burger"
+                android:scaleType="centerInside"
+                app:layout_constraintStart_toStartOf="@id/imgCategoriaBatata2"
+                app:layout_constraintEnd_toEndOf="@id/imgCategoriaBatata2"
+                app:layout_constraintTop_toTopOf="@id/imgCategoriaBatata2"
+                app:layout_constraintBottom_toBottomOf="@id/imgCategoriaBatata2"
+                app:srcCompat="@drawable/burger" />
+
+            <TextView
+                android:id="@+id/txtCategoriaBurger"
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:text="Burgers"
+                android:textColor="#333333"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="@id/imgCategoriaBatata2"
+                app:layout_constraintEnd_toEndOf="@id/imgCategoriaBatata2"
+                app:layout_constraintTop_toBottomOf="@id/imgCategoriaBatata2" />
+
+
+            <!-- ================================================= -->
+            <!-- BATATAS -->
+            <!-- ================================================= -->
+
+            <ImageView
+                android:id="@+id/imgCategoriaBatata"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:background="#CA2B2B"
+                android:contentDescription="Batatas"
+                android:scaleType="centerInside"
+                app:layout_constraintStart_toEndOf="@id/imgCategoriaBatata2"
+                app:layout_constraintTop_toTopOf="@id/imgCategoriaBatata2" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="75dp"
+                android:layout_height="58dp"
+                android:contentDescription="Batatas"
+                android:scaleType="centerInside"
+                app:layout_constraintStart_toStartOf="@id/imgCategoriaBatata"
+                app:layout_constraintEnd_toEndOf="@id/imgCategoriaBatata"
+                app:layout_constraintTop_toTopOf="@id/imgCategoriaBatata"
+                app:layout_constraintBottom_toBottomOf="@id/imgCategoriaBatata"
+                app:srcCompat="@drawable/batata" />
+
+            <TextView
+                android:id="@+id/txtCategoriaBatata"
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:text="Batatas"
+                android:textColor="#333333"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="@id/imgCategoriaBatata"
+                app:layout_constraintEnd_toEndOf="@id/imgCategoriaBatata"
+                app:layout_constraintTop_toBottomOf="@id/imgCategoriaBatata" />
+
+
+            <!-- ================================================= -->
+            <!-- FRANGO -->
+            <!-- ================================================= -->
+
+            <ImageView
+                android:id="@+id/imgCategoriaBatata3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:background="#CA2B2B"
+                android:contentDescription="Frango"
+                android:scaleType="centerInside"
+                app:layout_constraintStart_toEndOf="@id/imgCategoriaBatata"
+                app:layout_constraintTop_toTopOf="@id/imgCategoriaBatata2" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="55dp"
+                android:layout_height="60dp"
+                android:contentDescription="Frango"
+                android:scaleType="centerInside"
+                app:layout_constraintStart_toStartOf="@id/imgCategoriaBatata3"
+                app:layout_constraintEnd_toEndOf="@id/imgCategoriaBatata3"
+                app:layout_constraintTop_toTopOf="@id/imgCategoriaBatata3"
+                app:layout_constraintBottom_toBottomOf="@id/imgCategoriaBatata3"
+                app:srcCompat="@drawable/frango" />
+
+            <TextView
+                android:id="@+id/txtCategoriaFrango"
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:text="Frango"
+                android:textColor="#333333"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="@id/imgCategoriaBatata3"
+                app:layout_constraintEnd_toEndOf="@id/imgCategoriaBatata3"
+                app:layout_constraintTop_toBottomOf="@id/imgCategoriaBatata3" />
+
+
+            <!-- ================================================= -->
+            <!-- BEBIDAS -->
+            <!-- ================================================= -->
+
+            <ImageView
+                android:id="@+id/imgCategoriaBatata4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:background="#CA2B2B"
+                android:contentDescription="Bebidas"
+                android:scaleType="centerInside"
+                app:layout_constraintStart_toEndOf="@id/imgCategoriaBatata3"
+                app:layout_constraintTop_toTopOf="@id/imgCategoriaBatata2" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="82dp"
+                android:layout_height="82dp"
+                android:contentDescription="Bebida"
+                android:scaleType="centerInside"
+                app:layout_constraintBottom_toBottomOf="@id/imgCategoriaBatata4"
+                app:layout_constraintEnd_toEndOf="@id/imgCategoriaBatata4"
+                app:layout_constraintStart_toStartOf="@id/imgCategoriaBatata4"
+                app:layout_constraintTop_toTopOf="@id/imgCategoriaBatata4"
+                app:srcCompat="@drawable/bebida" />
+
+            <TextView
+                android:id="@+id/txtCategoriaFrango2"
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:text="Bebidas"
+                android:textColor="#333333"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="@id/imgCategoriaBatata4"
+                app:layout_constraintEnd_toEndOf="@id/imgCategoriaBatata4"
+                app:layout_constraintTop_toBottomOf="@id/imgCategoriaBatata4" />
+
+
+            <!-- ================================================= -->
+            <!-- SOBREMESAS -->
+            <!-- ================================================= -->
+
+            <ImageView
+                android:id="@+id/imgCategoriaBatata5"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
+                android:background="#CA2B2B"
+                android:contentDescription="Sobremesas"
+                android:scaleType="centerInside"
+                app:layout_constraintStart_toEndOf="@id/imgCategoriaBatata4"
+                app:layout_constraintTop_toTopOf="@id/imgCategoriaBatata2" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="72dp"
+                android:layout_height="67dp"
+                android:contentDescription="Sobremesa"
+                android:scaleType="centerInside"
+                app:layout_constraintBottom_toBottomOf="@id/imgCategoriaBatata5"
+                app:layout_constraintEnd_toEndOf="@id/imgCategoriaBatata5"
+                app:layout_constraintStart_toStartOf="@id/imgCategoriaBatata5"
+                app:layout_constraintTop_toTopOf="@id/imgCategoriaBatata5"
+                app:srcCompat="@drawable/sobremesa" />
+
+            <TextView
+                android:id="@+id/txtCategoriaFrango4"
+                android:layout_width="68dp"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:text="Sobremesas"
+                android:textColor="#333333"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="@id/imgCategoriaBatata5"
+                app:layout_constraintEnd_toEndOf="@id/imgCategoriaBatata5"
+                app:layout_constraintTop_toBottomOf="@id/imgCategoriaBatata5" />
+
+
+            <!-- ================================================= -->
+            <!-- MAIS PEDIDOS -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:id="@+id/txtMaisPedidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="22dp"
+                android:text="Mais pedidos"
+                android:textColor="#222222"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtCategoriaBurger" />
+
+
+            <!-- ================================================= -->
+            <!-- CARD COMBO 1 -->
+            <!-- ================================================= -->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardCombo1"
+                android:layout_width="0dp"
+                android:layout_height="185dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="6dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="3dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/cardCombo2"
+                app:layout_constraintTop_toBottomOf="@id/txtMaisPedidos"
+                app:layout_constraintWidth_percent="0.46">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="187dp">
+
+                    <ImageView
+                        android:id="@+id/imgCombo1"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="8dp"
+                        android:contentDescription="Imagem do Combo 1"
+                        android:scaleType="centerInside"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/mclanchefeliz_umamcoferta"
+                        tools:layout_editor_absoluteX="0dp" />
+
+                    <TextView
+                        android:id="@+id/txtCombo1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="9dp"
+                        android:text="McLanche Feliz + 1 Mc Oferta"
+                        android:textColor="#222222"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imgCombo1" />
+
+                    <TextView
+                        android:id="@+id/txtPrecoCombo1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginBottom="9dp"
+                        android:text="R$ 52,90"
+                        android:textColor="#DA291C"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- ================================================= -->
+            <!-- CARD COMBO 2 -->
+            <!-- ================================================= -->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardCombo2"
+                android:layout_width="0dp"
+                android:layout_height="185dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="20dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="3dp"
+                app:layout_constraintStart_toEndOf="@id/cardCombo1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/cardCombo1"
+                app:layout_constraintWidth_percent="0.46">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="187dp">
+
+                    <ImageView
+                        android:id="@+id/imgCombo2"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="4dp"
+                        android:contentDescription="Imagem do Combo 2"
+                        android:scaleType="centerInside"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/mclanchefeliz_duasmcofertas"
+                        tools:layout_editor_absoluteX="0dp" />
+
+                    <TextView
+                        android:id="@+id/txtCombo2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="9dp"
+                        android:text="McLanche Feliz + 2 Mc Ofertas"
+                        android:textColor="#222222"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imgCombo2" />
+
+                    <TextView
+                        android:id="@+id/txtPrecoCombo2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginBottom="9dp"
+                        android:text="R$ 78,90"
+                        android:textColor="#DA291C"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <!-- ===================================================== -->
+    <!-- MENU INFERIOR FIXO -->
+    <!-- ===================================================== -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/menuInferior"
+        android:layout_width="0dp"
+        android:layout_height="68dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/menuHome"
+                android:layout_width="84dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="🏠&#10;Início"
+                android:textColor="#DA291C"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/menuCardapio"
+                android:layout_width="88dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="☰&#10;Menu"
+                android:textColor="#777777"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/menuHome" />
+
+            <TextView
+                android:id="@+id/menuPedidos"
+                android:layout_width="85dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="🛍&#10;Pedidos"
+                android:textColor="#777777"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/menuCardapio" />
+
+            <TextView
+                android:id="@+id/menuPerfil"
+                android:layout_width="82dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="👤&#10;Perfil"
+                android:textColor="#777777"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/menuPedidos" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- ===================================================== -->
+    <!-- SACOLA -->
+    <!-- ===================================================== -->
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="399dp"
-        android:layout_height="160dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:scaleType="centerCrop"
+        android:id="@+id/imageView2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintHorizontal_bias="0.958"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.244"
-        app:srcCompat="@drawable/banner_sorvete" />
+        app:layout_constraintVertical_bias="0.015"
+        app:srcCompat="@drawable/sacola" />
 
-    <TextView
-        android:id="@+id/txtCategorias"
-        android:layout_width="200dp"
-        android:layout_height="30dp"
-        android:text="Categorias"
-        android:textColor="#222222"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/imageView5"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp" />
 
-    <!-- ================================================= -->
-    <!-- CATEGORIA 1 - BURGER -->
-    <!-- ================================================= -->
+    <!-- ===================================================== -->
+    <!-- MENU -->
+    <!-- ===================================================== -->
 
     <ImageView
-        android:id="@+id/imgCategoriaBatata2"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="#CA2B2B"
-        android:contentDescription="Batatas"
-        android:scaleType="centerInside"
-        app:layout_constraintTop_toBottomOf="@id/txtCategorias"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp" />
-
-    <ImageView
-        android:id="@+id/imgCategoriaBatata5"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="340dp"
-        android:layout_marginTop="12dp"
-        android:background="#CA2B2B"
-        android:contentDescription="Batatas"
-        android:scaleType="centerInside"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtCategorias" />
-
-    <TextView
-        android:id="@+id/txtCategoriaBurger"
-        android:layout_width="60dp"
-        android:layout_height="29dp"
-        android:gravity="center"
-        android:text="Burgers"
-        android:textColor="#333333"
-        android:textSize="11sp"
-        app:layout_constraintTop_toBottomOf="@id/imgCategoriaBatata2"
-        app:layout_constraintStart_toStartOf="@id/imgCategoriaBatata2"
-        app:layout_constraintEnd_toEndOf="@id/imgCategoriaBatata2"
-        android:layout_marginTop="5dp" />
-
-    <!-- ================================================= -->
-    <!-- CATEGORIA 2 - BATATA -->
-    <!-- ================================================= -->
-
-    <ImageView
-        android:id="@+id/imgCategoriaBatata"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="#CA2B2B"
-        android:contentDescription="Batatas"
-        android:scaleType="centerInside"
-        app:layout_constraintTop_toBottomOf="@id/txtCategorias"
-        app:layout_constraintStart_toEndOf="@id/imgCategoriaBatata2"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp" />
-
-    <TextView
-        android:id="@+id/txtCategoriaBatata"
-        android:layout_width="60dp"
-        android:layout_height="25dp"
-        android:gravity="center"
-        android:text="Batatas"
-        android:textColor="#333333"
-        android:textSize="11sp"
-        app:layout_constraintTop_toBottomOf="@id/imgCategoriaBatata"
-        app:layout_constraintStart_toStartOf="@id/imgCategoriaBatata"
-        app:layout_constraintEnd_toEndOf="@id/imgCategoriaBatata"
-        android:layout_marginTop="5dp" />
-
-    <!-- ================================================= -->
-    <!-- CATEGORIA 3 - FRANGO -->
-    <!-- ================================================= -->
-
-    <ImageView
-        android:id="@+id/imgCategoriaBatata3"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="#CA2B2B"
-        android:contentDescription="Frango"
-        android:scaleType="centerInside"
-        app:layout_constraintTop_toBottomOf="@id/txtCategorias"
-        app:layout_constraintStart_toEndOf="@id/imgCategoriaBatata"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp" />
-
-    <TextView
-        android:id="@+id/txtCategoriaFrango"
-        android:layout_width="60dp"
-        android:layout_height="25dp"
-        android:gravity="center"
-        android:text="Frango"
-        android:textColor="#333333"
-        android:textSize="11sp"
-        app:layout_constraintTop_toBottomOf="@id/imgCategoriaBatata3"
-        app:layout_constraintStart_toStartOf="@id/imgCategoriaBatata3"
-        app:layout_constraintEnd_toEndOf="@id/imgCategoriaBatata3"
-        android:layout_marginTop="5dp" />
-
-    <!-- ================================================= -->
-    <!-- CATEGORIA 4 - BEBIDAS -->
-    <!-- ================================================= -->
-
-    <ImageView
-        android:id="@+id/imgCategoriaBatata4"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="#CA2B2B"
-        android:contentDescription="Bebidas"
-        android:scaleType="centerInside"
-        app:layout_constraintTop_toBottomOf="@id/txtCategorias"
-        app:layout_constraintStart_toEndOf="@id/imgCategoriaBatata3"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp" />
-
-    <TextView
-        android:id="@+id/txtCategoriaFrango2"
-        android:layout_width="60dp"
-        android:layout_height="25dp"
-        android:gravity="center"
-        android:text="Bebidas"
-        android:textColor="#333333"
-        android:textSize="11sp"
-        app:layout_constraintTop_toBottomOf="@id/imgCategoriaBatata4"
-        app:layout_constraintStart_toStartOf="@id/imgCategoriaBatata4"
-        app:layout_constraintEnd_toEndOf="@id/imgCategoriaBatata4"
-        android:layout_marginTop="5dp" />
-
-    <!-- ================================================= -->
-    <!-- MAIS PEDIDOS -->
-    <!-- ================================================= -->
-
-    <TextView
-        android:id="@+id/txtCategoriaFrango4"
-        android:layout_width="68dp"
-        android:layout_height="27dp"
-        android:gravity="center"
-        android:text="Sobremesas"
-        android:textColor="#333333"
-        android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.971"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.608" />
-
-    <TextView
-        android:id="@+id/txtMaisPedidos"
-        android:layout_width="200dp"
-        android:layout_height="30dp"
-        android:text="Mais pedidos"
-        android:textColor="#222222"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/txtCategoriaBurger"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="25dp" />
-
-    <!-- ================================================= -->
-    <!-- ÁREA DOS PRODUTOS -->
-    <!-- ================================================= -->
-
-    <!-- COLOQUE A IMAGEM DO PRODUTO AQUI -->
-
-    <!-- ================================================= -->
-    <!-- MENU INFERIOR -->
-    <!-- ================================================= -->
-
-    <TextView
-        android:id="@+id/menuHome"
-        android:layout_width="70dp"
-        android:layout_height="55dp"
-        android:gravity="center"
-        android:text="🏠&#10;Início"
-        android:textColor="#DA291C"
-        android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="15dp"
-        android:layout_marginBottom="10dp" />
-
-    <TextView
-        android:id="@+id/menuCardapio"
-        android:layout_width="70dp"
-        android:layout_height="55dp"
-        android:gravity="center"
-        android:text="☰&#10;Menu"
-        android:textColor="#777777"
-        android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/menuHome"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="10dp" />
-
-    <TextView
-        android:id="@+id/menuPedidos"
-        android:layout_width="70dp"
-        android:layout_height="55dp"
-        android:gravity="center"
-        android:text="🛍&#10;Pedidos"
-        android:textColor="#777777"
-        android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/menuCardapio"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="10dp" />
-
-    <TextView
-        android:id="@+id/menuPerfil"
-        android:layout_width="70dp"
-        android:layout_height="55dp"
-        android:gravity="center"
-        android:text="👤&#10;Perfil"
-        android:textColor="#777777"
-        android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/menuPedidos"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="10dp" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="74dp"
-        android:layout_height="55dp"
+        android:id="@+id/imageView3"
+        android:layout_width="43dp"
+        android:layout_height="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.043"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.54"
-        app:srcCompat="@drawable/burger" />
+        app:layout_constraintVertical_bias="0.022"
+        app:srcCompat="@drawable/menu" />
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="106dp"
-        android:layout_height="58dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.256"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.542"
-        app:srcCompat="@drawable/batata" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="63dp"
-        android:layout_height="71dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.541"
-        app:srcCompat="@drawable/frango" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="113dp"
-        android:layout_height="81dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.77"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.538"
-        app:srcCompat="@drawable/bebida" />
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="86dp"
-        android:layout_height="86dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.989"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.533"
-        app:srcCompat="@drawable/sobremesa" />
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="130dp"
-        android:layout_height="59dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

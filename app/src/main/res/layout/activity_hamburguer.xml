@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFDF7"
+    tools:context=".hamburguer">
+
+
+    <!-- ================================================= -->
+    <!-- CARTÃO PRINCIPAL - AGORA OCUPA A TELA INTEIRA -->
+    <!-- ================================================= -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardPrincipal"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <!-- ================================================= -->
+            <!-- CABEÇALHO VERMELHO MCDONALD'S -->
+            <!-- ================================================= -->
+
+            <View
+                android:id="@+id/fundoVermelho"
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:background="#DA291C"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!-- ================================================= -->
+            <!-- BOTÃO VOLTAR -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:id="@+id/btnVoltar2"
+                android:layout_width="48dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="16dp"
+                android:gravity="center"
+                android:text="‹"
+                android:textColor="#FFFFFF"
+                android:textSize="36sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!-- ================================================= -->
+            <!-- LOGO MCDONALD'S -->
+            <!-- ================================================= -->
+
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="85dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="18dp"
+                android:contentDescription="Logo McDonald's"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!-- ================================================= -->
+            <!-- TRÊS PONTOS -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:id="@+id/btnMais"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:text="⋮"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!-- ================================================= -->
+            <!-- HAMBÚRGUER -->
+            <!-- ================================================= -->
+
+            <ImageView
+                android:id="@+id/imgHamburguer"
+                android:layout_width="315dp"
+                android:layout_height="270dp"
+                android:layout_marginTop="75dp"
+                android:contentDescription="Hamburguer"
+                android:scaleType="fitCenter"
+                android:src="@drawable/burger"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!-- ================================================= -->
+            <!-- NOME DO PRODUTO -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:id="@+id/txtHamburguer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="52dp"
+                android:text="Big Mac"
+                android:textColor="#222222"
+                android:textSize="27sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imgHamburguer" />
+
+
+            <!-- ================================================= -->
+            <!-- PREÇO -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:id="@+id/txtPreco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="22dp"
+                android:text="R$ 22,90"
+                android:textColor="#DA291C"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/txtHamburguer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/txtHamburguer" />
+
+
+            <!-- ================================================= -->
+            <!-- DESCRIÇÃO CURTA -->
+            <!-- ================================================= -->
+
+
+            <!-- ================================================= -->
+            <!-- DETALHES -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:id="@+id/txtDescricaoCurta"
+                android:layout_width="359dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="8dp"
+                android:text="Pão, carne, queijo, alface, tomate, molho especial, cebola e picles"
+                android:textColor="#666666"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtHamburguer" />
+
+            <TextView
+                android:id="@+id/btnDetalhes"
+                android:layout_width="125dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="18dp"
+                android:background="#DA291C"
+                android:gravity="center"
+                android:text="Detalhes"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtDescricaoCurta" />
+
+
+            <!-- ================================================= -->
+            <!-- AVALIAÇÕES -->
+            <!-- ================================================= -->
+
+
+            <!-- ================================================= -->
+            <!-- DESCRIÇÃO DO HAMBÚRGUER -->
+            <!-- ================================================= -->
+
+
+            <!-- ================================================= -->
+            <!-- QUANTIDADE -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:id="@+id/txtDescricao"
+                android:layout_width="352dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="24dp"
+                android:lineSpacingExtra="3dp"
+                android:text="Dois hambúrgueres (100% carne bovina), alface americana, queijo processado sabor cheddar, molho especial, cebola, picles e pão com gergelim."
+                android:textColor="#444444"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.475"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnDetalhes" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardQuantidade"
+                android:layout_width="145dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <!-- MENOS -->
+
+                    <TextView
+                        android:id="@+id/btnMenos"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="6dp"
+                        android:background="#DA291C"
+                        android:gravity="center"
+                        android:text="−"
+                        android:textColor="#FFFFFF"
+                        android:textSize="23sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <!-- QUANTIDADE -->
+
+                    <TextView
+                        android:id="@+id/txtQuantidade"
+                        android:layout_width="35dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="#222222"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/btnMaisQuantidade"
+                        app:layout_constraintStart_toEndOf="@id/btnMenos"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <!-- MAIS -->
+
+                    <TextView
+                        android:id="@+id/btnMaisQuantidade"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginEnd="6dp"
+                        android:background="#DA291C"
+                        android:gravity="center"
+                        android:text="+"
+                        android:textColor="#FFFFFF"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- ================================================= -->
+            <!-- ADICIONAR AO CARRINHO -->
+            <!-- ================================================= -->
+
+            <TextView
+                android:id="@+id/btnAdicionar"
+                android:layout_width="165dp"
+                android:layout_height="55dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#DA291C"
+                android:gravity="center"
+                android:text="🛒  Adicionar"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
