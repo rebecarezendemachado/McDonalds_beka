@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".gps">
+
+
+    <!-- ================================================= -->
+    <!-- BARRA SUPERIOR -->
+    <!-- ================================================= -->
+
+    <View
+        android:id="@+id/barraTopo"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#DA291C" />
+
+
+    <!-- ================================================= -->
+    <!-- BOTÃO VOLTAR -->
+    <!-- ================================================= -->
+
+    <TextView
+        android:id="@+id/btnVoltar"
+        android:layout_width="55dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="5dp"
+        android:gravity="center"
+        android:text="‹"
+        android:textColor="#FFFFFF"
+        android:textSize="38sp"
+        android:textStyle="bold" />
+
+
+    <!-- ================================================= -->
+    <!-- LOGO -->
+    <!-- ================================================= -->
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="5dp"
+        android:contentDescription="Logo McDonald's"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo" />
+
+
+    <!-- ================================================= -->
+    <!-- SACOLA -->
+    <!-- ================================================= -->
+
+    <ImageView
+        android:id="@+id/imgSacola"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="18dp"
+        android:contentDescription="Sacola"
+        android:scaleType="centerInside"
+        android:src="@drawable/sacola" />
+
+
+    <!-- ================================================= -->
+    <!-- TÍTULO -->
+    <!-- ================================================= -->
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="30dp"
+        android:lineSpacingExtra="4dp"
+        android:text="Busque um restaurante para retirar o seu pedido"
+        android:textColor="#222222"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <!-- ================================================= -->
+    <!-- BANNER MCDELIVERY -->
+    <!-- ================================================= -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardBanner"
+        android:layout_width="375dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="175dp"
+        android:layout_marginEnd="20dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="3dp" >
+
+        <ImageView
+            android:id="@+id/imageView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/mcdelivery" />
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- ================================================= -->
+    <!-- PEÇA E RETIRE -->
+    <!-- ================================================= -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardPecaRetire"
+        android:layout_width="165dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="320dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="3dp">
+
+        <TextView
+            android:id="@+id/btnPecaRetire"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="📍  Peça e Retire"
+            android:textColor="#222222"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- ================================================= -->
+    <!-- MCDELIVERY -->
+    <!-- ================================================= -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardDelivery"
+        android:layout_width="165dp"
+        android:layout_height="65dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="320dp"
+        android:layout_marginEnd="28dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="3dp">
+
+        <TextView
+            android:id="@+id/btnDelivery"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="🛵  McDelivery"
+            android:textColor="#222222"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- ================================================= -->
+    <!-- PESQUISA -->
+    <!-- ================================================= -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardPesquisa"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="405dp"
+        android:layout_marginEnd="30dp"
+        app:cardBackgroundColor="#F7F7F7"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="0dp">
+
+        <EditText
+            android:id="@+id/edtPesquisa"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:hint="🔍  Buscar um restaurante"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:singleLine="true"
+            android:textColor="#222222"
+            android:textColorHint="#777777"
+            android:textSize="15sp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- ================================================= -->
+    <!-- BOTÃO LOCALIZAÇÃO -->
+    <!-- ================================================= -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardLocalizacao"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="478dp"
+        android:layout_marginEnd="30dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="2dp">
+
+        <Button
+            android:id="@+id/btnLocalizacao"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#FFFFFF"
+            android:text="Usar minha localização atual"
+            android:textColor="#222222"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:stateListAnimator="@null" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- ================================================= -->
+    <!-- MAPA -->
+    <!-- ================================================= -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Mapa"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginEnd="30dp"
+        app:cardBackgroundColor="#EEEEEE"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="3dp">
+
+        <WebView
+            android:id="@+id/webViewMapa"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- ================================================= -->
+    <!-- LINHA MENU INFERIOR -->
+    <!-- ================================================= -->
+
+    <View
+        android:id="@+id/linhaMenu"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="58dp"
+        android:background="#DDDDDD" />
+
+
+    <!-- ================================================= -->
+    <!-- MENU INFERIOR -->
+    <!-- ================================================= -->
+
+    <TextView
+        android:id="@+id/menuHome"
+        android:layout_width="85dp"
+        android:layout_height="58dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="2dp"
+        android:gravity="center"
+        android:text="🏠&#10;Início"
+        android:textColor="#DA291C"
+        android:textSize="10sp" />
+
+
+    <TextView
+        android:id="@+id/menuCardapio"
+        android:layout_width="85dp"
+        android:layout_height="58dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="110dp"
+        android:layout_marginBottom="2dp"
+        android:gravity="center"
+        android:text="☰&#10;Menu"
+        android:textColor="#777777"
+        android:textSize="10sp" />
+
+
+    <TextView
+        android:id="@+id/menuPedidos"
+        android:layout_width="85dp"
+        android:layout_height="58dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="200dp"
+        android:layout_marginBottom="2dp"
+        android:gravity="center"
+        android:text="🛍&#10;Pedidos"
+        android:textColor="#777777"
+        android:textSize="10sp" />
+
+
+    <TextView
+        android:id="@+id/menuPerfil"
+        android:layout_width="85dp"
+        android:layout_height="58dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="290dp"
+        android:layout_marginBottom="2dp"
+        android:gravity="center"
+        android:text="👤&#10;Perfil"
+        android:textColor="#777777"
+        android:textSize="10sp" />
+
+
+</FrameLayout>

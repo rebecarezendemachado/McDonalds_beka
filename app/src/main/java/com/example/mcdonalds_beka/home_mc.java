@@ -1,20 +1,18 @@
 package com.example.mcdonalds_beka;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.cardview.widget.CardView;
 
 public class home_mc extends AppCompatActivity {
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +32,7 @@ public class home_mc extends AppCompatActivity {
             return insets;
         });
 
+
         // IMAGEM DO HAMBÚRGUER
         ImageView imagemBurger = findViewById(R.id.imageView6);
 
@@ -41,7 +40,6 @@ public class home_mc extends AppCompatActivity {
             Intent intent = new Intent(home_mc.this, lista_hamburguer.class);
             startActivity(intent);
         });
-
 
 
         // IMAGEM BATATA
@@ -53,7 +51,6 @@ public class home_mc extends AppCompatActivity {
         });
 
 
-
         // IMAGEM FRANGO
         ImageView imagemFrango = findViewById(R.id.imageView8);
 
@@ -61,7 +58,6 @@ public class home_mc extends AppCompatActivity {
             Intent intent = new Intent(home_mc.this, lista_frango.class);
             startActivity(intent);
         });
-
 
 
         // IMAGEM BEBIDA
@@ -73,7 +69,6 @@ public class home_mc extends AppCompatActivity {
         });
 
 
-
         // IMAGEM SOBREMESA
         ImageView imagemSobremesa = findViewById(R.id.imageView10);
 
@@ -83,8 +78,6 @@ public class home_mc extends AppCompatActivity {
         });
 
 
-
-
         // RETIRAR EM
         CardView btnRetirar = findViewById(R.id.btnRetirar);
 
@@ -92,5 +85,6 @@ public class home_mc extends AppCompatActivity {
             Intent intent = new Intent(home_mc.this, gps.class);
             startActivity(intent);
         });
+
     }
 }

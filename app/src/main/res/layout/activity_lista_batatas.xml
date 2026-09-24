@@ -8,7 +8,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFDF7"
-    tools:context=".lista_sobremesa">
+    tools:context=".lista_batatas">
 
     <!-- ============================= -->
     <!-- TOPO -->
